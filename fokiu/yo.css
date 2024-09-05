@@ -1,0 +1,651 @@
+/*TODO: INICIO DE IMPORTAR FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jaini&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Pacifico&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Nova+Mono&family=Pacifico&family=Permanent+Marker&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Nova+Mono&family=Pacifico&family=Permanent+Marker&family=Rowdies:wght@300;400;700&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini&family=Nova+Mono&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Jaini&family=Nova+Mono&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Honk&family=Jaini&family=Nova+Mono&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Dosis:wght@200..800&family=Honk&family=Jaini&family=Nova+Mono&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap');
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.teko {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.codystar-light {
+  font-family: "Codystar", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.codystar-regular {
+  font-family: "Codystar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  
+  font-style: normal;
+}
+.nova-mono-regular {
+  font-family: "Nova Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.rowdies-light {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rowdies-regular {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rowdies-bold {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jaini-regular {
+  font-family: "Jaini", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+/*TODO: FIN DE IMPORTAR FONTS */
+
+body {
+  margin: 0;
+  background-color: #151515;
+  font-family: "Poppins", sans-serif;
+}
+
+
+        ::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+
+@media screen and (min-width: 800px){
+  .app {
+    width: 50%;
+    border-radius: 8px;
+    background-color: #202020;
+    margin: 5% auto;
+  }
+}
+  
+@media screen and (max-width: 800px){
+  .app {
+    width: 90%;
+    border-radius: 10px;
+    background-color: #202020;
+    margin: 5% auto;
+  }
+}
+.down {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.fondo {
+  width: 100%;
+  height: 7.4cm;
+  border-radius: 8px 8px 0px 0px;
+  background-image: url(https://raw.githubusercontent.com/PATITO22211/sitioweb/main/fokiu/banner6.webp);
+  background-size: cover;
+}
+
+.fondo::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-image: url(https://raw.githubusercontent.com/PATITO22211/sitioweb/main/fokiu/20240824_184457580_iOS.jpg);
+  background-size: 90%;
+  /* background-position:20%; */
+
+  background-position-x: center;
+  background-position-y: 25%;
+  border-radius: 26%;
+  margin: 25px;
+  position: relative;
+  outline: solid 5px #202020;
+  top: 59%;
+  z-index: 13;
+}
+.foto {
+  border: solid 10px #202020;
+  border-radius: 100%;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 20px;
+  top: -84px;
+}
+
+.i {
+  width: 150px;
+  height: 30px;
+  background-color: #272727;
+  border-radius: 6px;
+}
+.usuariosContainer {
+  display: flex;
+  gap: 10px; /* Espacio entre los elementos, puedes ajustarlo según sea necesario */
+}
+.musicContainer {
+
+  display: flex;
+  gap: 10px; /* Espacio entre los elementos, puedes ajustarlo según sea necesario */
+}
+
+.usuarioArea {
+  padding: 20px;
+  margin-top: 10px;
+  flex: 1; /* Permite que el elemento ocupe el espacio disponible */
+}
+
+.usuarioArea2 {
+  place-items: center;
+  perspective: 20000px;
+  padding: 10px;
+  margin-top: 10px;
+  flex: 1; /* Permite que el elemento ocupe el espacio disponible */
+}
+.zigzag {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: zigzag 16s infinite linear;
+  
+  i {
+    --color: hsl(200 700% calc(var(--i) * 15% + 50%));
+    position: absolute;
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-size: 67px;
+    padding-inline: 24px;
+    background-image: 
+      linear-gradient(45deg, transparent 30%, var(--color) 0 36%, transparent 0),
+      linear-gradient(-45deg, transparent 30%, var(--color) 0 36%, transparent 0);
+    background-size: 16px 8px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: translate3d(-50%, -50%, calc(var(--i) * 1px));
+  }
+}
+
+@keyframes zigzag {
+  from { transform: rotate(0deg) rotateX(30deg) rotate(360deg); }
+  to { transform: rotate(360deg) rotateX(30deg) rotate(0deg); }
+}
+.nombre {
+  color: rgb(203, 0, 0);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.user {
+  color: rgb(225, 96, 96);
+  font-weight: bold;
+}
+
+
+
+.infoDiv {
+  padding: 20px;
+  text-align: center;
+}
+.categoria {
+  color: gray;
+
+  font-weight: bold;
+}
+
+.cuadro {
+  /* margin: 10px; */
+  border: solid 1px #63ffae;
+  font-family: "teko";
+  border-radius: 8px;
+  padding: 10px;
+  width: 99%;
+  height: 55px;
+  background-color: #202020;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cuadro2 {
+  /* margin: 10px; */
+  border: solid 1px #d2ff72;
+  font-family: "teko";
+  border-radius: 8px;
+  padding: 10px;
+  width: 99%;
+  height: 55px;
+  background-color: #202020;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cuadro3 {
+  /* margin: 10px; */
+  border: solid 1px #72ffea;
+  font-family: "teko";
+  border-radius: 20px;
+  padding: 10px;
+  width: 99%;
+  height: 10%;
+  background-color: #202020;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.descSpan2 {
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+.gif {
+  position:relative;
+  bottom: 100%;
+  
+  /* transform: scaleX(-1); */
+  width: 10px; /* Adjust width as needed */
+  height: 30px; /* Adjust height as needed */
+  z-index: 999;
+}
+
+
+.ln {
+  height: 1.5px;
+  
+  background-color: #2c00cb;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  text-align: left;
+} 
+.descripcion2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.descripcion3 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.descSpan {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.linkSPan {
+  font-weight: bold;
+  color: #835cee;
+}
+.photos {
+  display: flex;
+  flex-wrap: wrap; /* This wraps images to the next line when space is limited */
+  justify-content: space-around;
+  
+  margin: 0 auto; /* This centers the gallery horizontally */
+}
+
+.photos img {
+  margin: 1px; /* Add some margin between images */
+  object-fit: cover; /* This resizes the image to fit the container while maintaining aspect ratio */
+}
+
+/* Optional media queries for responsiveness on smaller screens  */
+@media screen and (max-width: 320px) {
+  .photos img {
+    display: none;
+    /* width: 0px;
+    height: 0px; */
+  }
+  #galeria {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .photos img {
+    max-width: 90px; /* Adjust image width for smaller screens */
+    
+  }
+}
+
+
+@media screen and (min-width: 425px) {
+  .photos img {
+    max-width: 110px;
+    min-width: 90px; /* Make images fill the width on very small screens */
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%; /* Adjusted size */
+  max-width: 500px; /* Adjusted size */
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 500px; /* Adjusted size */
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  color: #f1f1f1;
+  font-size: 100px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal info */
+/* Info Modal Styles */
+.infomodal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100vh; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.infomodal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 500px;
+  background-color: #202020;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.infomodal.show .infomodal-content {
+  transform: scale(1.6);
+  opacity: 1;
+}
+
+/* Animation from line to box */
+@keyframes lineToBox {
+  from {
+      width: 0;
+      height: 3px;
+  }
+  to {
+      width: 60%;
+      height: 30%;
+  }
+}
+
+.infomodal.show .infomodal-content {
+  animation: lineToBox 0.5s forwards;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.infomodal.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.infomodal-body h2, .infomodal-body p {
+  color: white;
+}
+
+.ln2 {
+  height: 1px;
+  background-color: #ff002f;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  background-image: linear-gradient(to right, #4000ff, #000000, #9000ff, #000000, #000000, #0b0b0b, #ff0037); /* Definir un gradiente horizontal de colores */
+  -webkit-background-clip: text;
+  color: transparent; /* Hacer el texto transparente */
+  background-size: 200% 100%; /* Asegurarse de que el gradiente sea el doble de ancho del área de texto */
+  animation: rainbowBackground 5s linear infinite; /* Aplicar la animación "rainbowBackground" durante 5 segundos, repetir infinitamente */
+  font-size: 25px; /* Tamaño inicial de la fuente */
+  transition: color 0.3s, font-size 0.3s; /* Transiciones suaves para color y tamaño de fuente */
+  background-size: 200% 100%; /* Asegurarse de que el gradiente sea el doble de ancho del área de texto */
+  animation: rainbowBackground 5s linear infinite; /* Aplicar la animación "rainbowBackground" durante 5 segundos, repetir infinitamente */
+
+}
+
+.vp {
+  font-family: rowdies;
+}
+
+
+/* .principal {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  background-image: linear-gradient(to left, #ff0000, #ff7a7a, #ffffff, #3a2a2a, #ffffff, #00b37a, #006847); /* Definir un gradiente horizontal de colores */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; /* Hacer el texto transparente */
+  /* background-size: 50% 100%; /* Asegurarse de que el gradiente sea el doble de ancho del área de texto */
+  /* animation: rainbowBackground 5s linear infinite; Aplicar la animación "rainbowBackground" durante 5 segundos, repetir infinitamente */ */
+}
+
+
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0 0; /* Comenzar desde el extremo izquierdo */
+  }
+  100% {
+    background-position: 200% 0; /* Moverse completamente hacia la derecha */
+  }
+}
+
+a:hover {
+  color: #ff57ab;
+  font-size: 28px;
+  transition: color 0.3s, font-size 0.3s;
+  animation: rainbowText 2.5s;
+}
+@keyframes rainbowText {
+
+  0% {
+    color: #ea00ff;
+  }
+  25% {
+    color: #cacaca; /* Color después del 20% de la animación */
+  }
+  40% {
+    color: #232323;
+  }
+  60% {
+    color: #bababa;
+  }
+  80% {
+    color: #ffc2d7; /* Color final */
+  }
+}
+
+
+.png {
+  position: absolute;
+  left: 5px;
+  height: 35px;
+  width: 35px;
+}
+
+.png2 {
+  position: absolute;
+  left: 0px;
+  height: 50px;
+  width: 50px;
+
+}
+.btn {
+  margin-top: 10px;
+  padding: 10px;
+  color: rgb(226, 214, 255);
+  background: #272727;
+  border-radius: 6px;
+  font-family:'Poetsen One', Times, serif;
+
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  transition: 0.8s;
+}
+.btnP {
+  margin-top: 0px;
+  margin-right: 5px;
+  padding: 3px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+}
+.btn:hover {
+  background: #494949;
+}
+.btn:active {
+  background: #292929;
+}
