@@ -1,0 +1,20 @@
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #202020;
+    background-image: linear-gradient(to bottom right, #202020, #404040);
+
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 999; /* Para que esté encima de otros elementos */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .modal.show {
+    opacity: 1;
+  }
