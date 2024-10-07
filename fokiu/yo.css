@@ -145,7 +145,7 @@ body {
   display: block;
   width: 150px;
   height: 150px;
-  background-image: url(https://raw.githubusercontent.com/PATITO22211/sitioweb2.0/main/fokiu/pato.png);
+  background-image: url(https://raw.githubusercontent.com/PATITO22211/sitioweb2.0/main/fokiu/20241005_153518733_iOS.jpg);
   background-size: 90%;
   /* background-position:20%; */
 
@@ -203,7 +203,7 @@ body {
   animation: zigzag 16s infinite linear;
   
   i {
-    --color: hsl(200 700% calc(var(--i) * 15% + 50%));
+    --color: hsl(20 70% calc(var(--i) * 14% + 50%));
     position: absolute;
     font-family: "Prompt", sans-serif;
     font-weight: 900;
@@ -231,7 +231,7 @@ body {
 }
 
 .user {
-  color: rgb(225, 96, 96);
+  color: rgb(96, 225, 165);
   font-weight: bold;
 }
 
@@ -451,7 +451,7 @@ body {
   display: none; 
   position: fixed; 
   z-index: 1; 
-  padding-top: 100px; 
+  padding-top: 250px; 
   left: 0;
   top: 0;
   width: 100%; 
