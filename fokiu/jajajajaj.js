@@ -17,7 +17,7 @@ const typed = new Typed('.typed', {
 		"<i class='texto'>2024...</i>",
 		'<i class="texto">Im going to be a f***king money maker</i>',
 
-		"<i class='texto'>I'm going to be the money man</i>",
+		"<i class='texto'>I'm going to the moon</i>",
 		"<i class='texto'>₯</i>",
 
 
@@ -53,10 +53,7 @@ const typed2 = new Typed('.typed2', {
 		// "<i class='texto'>waiting for love</i>",
 		"<i class='texto'>2009</i>",
 		"<i class='texto'>😎🔥</i>",
-		"<i class='texto'>MAKING MONEY SINCE 2023</i>",
-		"<i class='texto'>I'm going to be the money man</i>",
-		"<i class='texto'>I hate people called alex, not all but some of them...</i>",
-		'<i class="texto">Im going to be a f***king money maker</i>',
+		"<i class='texto'>MAKING PEOPLE RICH SINCE 2023</i>",
 		
 		
 		"<i class='texto'>🧨</i>",
