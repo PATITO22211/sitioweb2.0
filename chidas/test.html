@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GomiChidas - Placer Prohibido</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fondo y tipografía general */
+    body {
+      background-color: #202020;
+      color: #E0E0E0;
+      font-family: 'Chewy', sans-serif; /* Cambiar a una fuente divertida */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 800px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      animation: fadeIn 1s; /* Efecto de entrada */
+    }
+
+    /* Título */
+    h1 {
+      color: #D32F2F;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* Subtítulo */
+    h2 {
+      color: #FF5722;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    /* Texto descriptivo */
+    p {
+      color: #B0B0B0;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Botón estilo oscuro */
+    .btn {
+      background-color: #D32F2F;
+      color: #E0E0E0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones adicionales */
+    }
+
+    .btn:hover {
+      background-color: #B71C1C;
+      transform: scale(1.05); /* Efecto de escala */
+    }
+
+    /* Efecto "ilegal" en el pie de página */
+    .footer {
+      margin-top: 20px;
+      color: #757575;
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    /* Animación de entrada */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>GomiChidas</h1>
+    <h2>Placer clandestino en cada bocado</h2>
+    <p>Explora nuestros sabores irresistibles y disfruta de una experiencia que no encontrarás en otro lugar. Te traemos los mejores "golpes" de sabor en presentaciones que desafían la ley.</p>
+    <button class="btn">Descubre más</button>
+    <div class="footer">⚠️ Consumir bajo tu propio riesgo.</div>
+  </div>
+
+</body>
+</html>

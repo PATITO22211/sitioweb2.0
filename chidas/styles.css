@@ -1,0 +1,434 @@
+/* Estilo general */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Sixtyfour+Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.sixtyfour-convergence {
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+
+.chewy-regular {
+    font-family: "Chewy", system-ui;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #202020;
+    color: #e0e0e0;
+
+    background: linear-gradient(to bottom, #2c3e50, #34495e); /* Gradiente oscuro */
+    
+    
+}
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #e0e0e0;
+}
+
+.navbar nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #ff5555;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #333333, #1a1a1a);
+    color: #ff5555;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Chewy';
+}
+
+.hero h2 span {
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #bf00ff, 0 0 20px #00ffc8; }
+    to { text-shadow: 0 0 10px #9233ff, 0 0 20px #1aff00, 0 0 40px #0099ff; }
+}
+
+.hero p {
+    font-size: 2rem;
+    color: #e0e0e0;
+    font-style: oblique;
+    font-family: 'Bebas Neue';
+}
+
+
+/* Botón */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    margin-top: 3rem;
+    background-color: #03ffff75;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Anton';
+    font-size: 1.7rem;
+    transition: background 0.3s, transform 0.2s;
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+.btn-comprar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+/* Productos */
+.productos {
+    padding: 10px;
+}
+
+.producto-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre los productos */
+}
+
+.producto {
+    background-color: #f9f9f9; /* Fondo para los productos */
+    padding: 15px;
+    border: 1px solid #ccc; /* Bordes para los productos */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.producto h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.productos h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.producto {
+    background-color: rgba(210, 61, 61, 0.9); /* Fondo semitransparente */
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 15px; /* Bordes redondeados */
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .producto-wrapper {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+    
+    .producto h3 {
+        font-size: 1.5em; /* Aumentar tamaño de fuente en móviles */
+    }
+    
+    .producto p {
+        font-size: 1em; /* Aumentar tamaño de fuente en móviles */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+/* Estilo del modal */
+.modal-info {
+    position: absolute; /* Cambia a absolute para posicionarlo respecto a .producto-wrapper */
+    top: -100%; /* Posiciona el modal justo encima del producto */
+    left: 50%;
+    transform: translate(-50%, -10%) scale(0.9); /* Ajusta el desplazamiento */
+    width: 100%;
+    max-width: 300px;
+    background-color: #303030;
+    color: #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Muestra el modal después del hover */
+.producto:hover .modal-info {
+    transition-delay: 10ms;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -20%) scale(1); /* Ajusta la posición */
+}
+
+/* animacion hero */
+.hero h2, 
+.hero p {
+    animation: fadeIn 2s ease-in-out, bounceOnce 1s ease-in-out infinite, bounceOnce 1s ease-in-out infinite; /* Salto y sacudida infinita */
+}
+
+.hero .btn {
+    animation: pulse 1.5s infinite, shake 0.5s ease-in-out infinite; /* Pulsar y sacudir en el botón */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de salto */
+@keyframes bounceOnce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Altura del salto */
+    }
+}
+
+/* Animación de sacudida en todas direcciones */
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0); /* Sin movimiento */
+    }
+    25% {
+        transform: translate(5px, -5px); /* Diagonal hacia arriba a la derecha */
+    }
+    50% {
+        transform: translate(-5px, 5px); /* Diagonal hacia abajo a la izquierda */
+    }
+    75% {
+        transform: translate(5px, 5px); /* Diagonal hacia abajo a la derecha */
+    }
+}
+
+/* Animación de pulso para el botón */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta el tamaño */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Estilos para el botón */
+.btn {
+    animation: fadeIn 1s ease-in-out, bounceOnce infinite 1s ease-in-out 2s;  /* fadeIn seguido de un solo bounce */
+}
+
+/* Footer */
+
+.container {
+    max-width: 1200px; /* Ajusta el ancho máximo */
+    margin: auto; /* Centra el contenedor */
+    padding: 20px; /* Espacio interno */
+    background: #3030307b; /* Fondo semitransparente */
+    margin-top: 2%;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(51, 51, 51, 0.8); /* Fondo semitransparente para el footer */
+    border-radius: 15px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+}
+.footer p {
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+        
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+/* Estilos para el loader */
+#loader {
+    position: fixed; /* Para que se quede en el centro de la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ff5555; /* Color del borde superior */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Animación de giro */
+    z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Animación de giro */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Para ocultar el loader */
+.hidden {
+    display: none;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que quede detrás del contenido */
+}
+
+/* modal-contacto */
+
+.modal {
+    display: flex; /* Cambia a flex para centrar el contenido */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+    background-color: #333; /* Color de fondo oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Chewy';
+    width: 50rem; /* Ajusta el tamaño según sea necesario */
+    text-align: center;
+    color: white; /* Color del texto en blanco */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white; /* Cambiar color al pasar el mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.perfil-container {
+    display: flex; /* Usa flexbox para alinear los elementos en línea */
+    font-family: 'Chewy';
+    justify-content: space-between; /* Espacia los perfiles a los extremos */
+    align-items: flex-start; /* Alinea los perfiles en la parte superior */
+    margin-bottom: 20px; /* Espaciado entre el contenedor y otros elementos */
+}
+
+.perfil {
+    flex: 1; /* Permite que cada perfil ocupe el mismo ancho */
+    margin: 0 10px; /* Espacio horizontal entre los perfiles */
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro para los perfiles */
+    padding: 20px; /* Espaciado interno */
+    font-family: 'Anton';
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+
+.perfil a {
+    display: inline-block;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: aqua; /* Color de los enlaces */
+}
+.hidden {
+    display: none; /* Oculta el elemento */
+}
