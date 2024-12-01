@@ -15,8 +15,7 @@ const typed = new Typed('.typed', {
 		// "<i class='texto'>waiting for love</i>",
 		"<i class='texto'>la Nu está a punto de explotar</i>",
 		"<i class='texto'>2024...</i>",
-		'<i class="texto">study, I'm going to need employees
-		</i>',
+		"<i class="texto">study, I'm going to need employees </i>",
 
 		"<i class='texto'>I'm going to the moon</i>",
 		"<i class='texto'>₯</i>",
