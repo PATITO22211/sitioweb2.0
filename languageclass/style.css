@@ -1,0 +1,192 @@
+:root {
+    --bg-color: #0f0f0f; /* Aún más oscuro */
+    --isla-bg-color: #1a1a1a; /* Isla ligeramente más clara */
+    --card-bg-color: #252525;
+    --text-color: #f0f0f0;
+    --text-secondary-color: #a0a0a0;
+    --accent-color: #00A9FF; /* Un azul más vibrante */
+    --accent-hover-color: #007acc;
+    --playing-color: #28a745; /* Verde para reproduciendo */
+    --playing-hover-color: #1e7e34;
+    --border-radius: 12px; /* Bordes más redondeados */
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --box-shadow-strong: 0 8px 25px rgba(0, 0, 0, 0.5);
+    --font-headings: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, #111 25%, #000 100%); /* Fondo con gradiente sutil */
+    color: var(--text-color);
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 20px; /* Más padding general */
+    overflow-x: hidden; /* Prevenir scroll horizontal por animaciones */
+}
+
+.isla-container {
+    background-color: var(--isla-bg-color);
+    padding: 40px 50px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-strong);
+    width: 90%;
+    max-width: 950px;
+    text-align: center;
+    opacity: 0; /* Para animación de entrada */
+    transform: translateY(30px); /* Para animación de entrada */
+    animation: fadeInIsland 0.8s 0.2s ease-out forwards;
+}
+
+@keyframes fadeInIsland {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    font-family: var(--font-headings);
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.agradecimiento {
+    font-size: 1.2em;
+    color: var(--text-secondary-color);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.adas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.ada-item {
+    background-color: var(--card-bg-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInCard 0.5s ease-out forwards;
+}
+
+/* Animación de entrada para tarjetas (escalonada con JS) */
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.ada-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 169, 255, 0.2); /* Sombra con color de acento */
+}
+
+.ada-item.is-playing {
+    box-shadow: 0 0 15px var(--playing-color), 0 0 5px var(--playing-color) inset;
+    border: 1px solid var(--playing-color);
+}
+
+.ada-item h2 {
+    font-family: var(--font-headings);
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-size: 1.6em;
+}
+
+.ada-item p {
+    color: var(--text-secondary-color);
+    font-size: 0.98em;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre botón y barra de progreso */
+    width: 100%;
+}
+
+.listen-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0; /* Quitamos padding para controlar tamaño con width/height */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Botón redondo */
+    cursor: pointer;
+    font-size: 1.2em; /* Tamaño del icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+.listen-btn:hover {
+    background-color: var(--accent-hover-color);
+    transform: scale(1.1);
+}
+
+.listen-btn:active {
+    transform: scale(0.95);
+}
+
+.listen-btn.playing {
+    background-color: var(--playing-color);
+}
+.listen-btn.playing:hover {
+    background-color: var(--playing-hover-color);
+}
+
+.progress-bar-container {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    height: 8px;
+    background-color: #3f3f3f; /* Fondo de la barra */
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer; /* Para indicar que se puede hacer clic para buscar */
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Inicia en 0 */
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    transition: width 0.1s linear; /* Transición suave para el progreso */
+}
+
+.ada-item.is-playing .progress-bar {
+    background-color: var(--playing-color);
+}
+
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: var(--text-secondary-color);
+}
+
+#audioPlayer {
+    display: none; /* Ocultamos el reproductor nativo */
+}

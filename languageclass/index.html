@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis ADAS - Berenice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="isla-container">
+        <header>
+            <h1>Hi Teacher Berenice :)</h1>
+            <p class="agradecimiento">Thank you to receive my late ADAS</p>
+        </header>
+
+        <main class="adas-grid">
+            <div class="ada-item">
+                <h2>ADA 5</h2>
+                <p>:)</p>
+                <div class="audio-controls">
+                    <button class="listen-btn" data-audio="audios/ada5_.wav">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ada-item">
+                <h2>ADA 6</h2>
+                <p>:)</p>
+                 <div class="audio-controls">
+                    <button class="listen-btn" data-audio="audios/ada6.wav">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ada-item">
+                <h2>ADA 7</h2>
+                <p>:)</p>
+                 <div class="audio-controls">
+                    <button class="listen-btn" data-audio="audios/ada7.wav">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Puedes agregar más ADAS aquí -->
+        </main>
+
+        <footer>
+            <p>thank you teacher</p>
+        </footer>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
