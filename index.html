@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRG - Portafolio</title>
+    <link rel="stylesheet" href="css/new-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <div class="portfolio-container">
+        <!-- Barra de navegación -->
+        <div class="nav-bar">
+            <a href="https://discord.com/users/822245773772193792" class="nav-item hover-lift">
+                <i class="ri-github-fill"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://discord.com/users/822245773772193792" class="nav-item hover-lift">
+                <i class="ri-discord-fill"></i>
+                <span>Discord</span>
+            </a>
+            <a href="https://x.com/DesconectadosS2" target="_blank" rel="noopener noreferrer" class="nav-item hover-lift">
+                <i class="ri-twitter-x-fill"></i>
+                <span>X</span>
+            </a>
+            <a href="https://instagram.com/da_rio.patito" target="_blank" class="nav-item hover-lift">
+                <i class="ri-instagram-line"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="mailto:desconectadosnow@gmail.com" class="nav-item hover-lift">
+                <i class="ri-mail-line"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://www.threads.com/@da_rio.patito" class="nav-item hover-lift">
+                <i class="ri-threads-line"></i>
+                <span>Threads</span>
+            </a>
+        </div>
+
+        <!-- Tarjeta de perfil principal -->
+        <div class="profile-card hover-glow">
+            <div class="profile-header">
+                <img src="https://dxrio.net/fokiu/Captura%20de%20pantalla%202025-05-27%20170111.png" alt="JRG" class="profile-pic">
+                <div class="profile-info">
+                    <h1 class="profile-name">JRG</h1>
+                    <h3><i class="ri-at-line"></i> da_rio.patito</h3>
+                    <h4>soñando despierto...</h4>
+                    <h5>15 Y/O</h5>
+                    <div class="profile-title">
+                        <span class="title-tag">
+                            <i class="ri-code-s-slash-line"></i>
+                            Full Stack Dev
+                        </span>
+                        <span class="title-tag">
+                            <i class="ri-palette-line"></i>
+                            Diseñador
+                        </span>
+                        <span class="title-tag">
+                            <i class="ri-robot-line"></i>
+                            IA Passionate
+                        </span>
+                        <span class="title-tag">
+                            <i class="ri-window-line"></i>
+                            Desktop App
+                        </span>
+                    </div>
+                    <p class="profile-experience">
+                        <span class="experience-highlight">4 años</span> de experiencia desarrollando soluciones digitales que impulsan el crecimiento de tu negocio.
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="skill-item hover-lift">
+                    <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                    HTML/CSS
+                </div>
+                <div class="skill-item hover-lift">
+                    <i class="devicon-javascript-plain colored"></i>
+                    JavaScript
+                </div>
+                <div class="skill-item hover-lift">
+                    <i class="devicon-python-plain colored"></i>
+                    Python
+                </div>
+                <div class="skill-item hover-lift">
+                    <i class="devicon-react-original colored"></i>
+                    React
+                </div>
+                <div class="skill-item hover-lift">
+                    <i class="devicon-nodejs-plain colored"></i>
+                    Node.js
+                </div>
+                <div class="skill-item hover-lift">
+                    <i class="ri-database-2-line"></i>
+                    SQL/NoSQL
+                </div>
+
+                <div class="skill-item hover-lift">
+                    <i class="ri-cloud-line"></i>
+                    Cloud
+                </div>
+            </div>
+
+            <div class="music-player">
+                <div class="music-header">
+                    <i class="ri-spotify-fill"></i>
+                    <span></span>
+                </div>
+                
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0FIDCNYYjNvPVimz5icugS?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+        </div>
+
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de entrada para elementos
+            const elementsToAnimate = document.querySelectorAll('.profile-card, .project-card, .nav-item, .skill-item');
+            elementsToAnimate.forEach((element, index) => {
+                element.style.opacity = '0';
+                // Aplicar un transform inicial diferente para variar la entrada
+                if (element.classList.contains('profile-card') || element.classList.contains('project-card')) {
+                    element.style.transform = 'translateY(40px)';
+                } else {
+                    element.style.transform = 'translateY(20px)';
+                }
+                
+                setTimeout(() => {
+                    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 150 + index * 100); // Inicio ligeramente retrasado y escalonado
+            });
+            
+            // Efecto parallax sutil para tarjetas principales
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 100;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 100;
+                
+                const cards = document.querySelectorAll('.profile-card, .project-card');
+                cards.forEach(card => {
+                    // Aplicar el parallax solo si el elemento no está siendo animado por el scroll
+                    if (!card.classList.contains('is-visible')) {
+                        card.style.transform = `translateX(${xAxis}px) translateY(${yAxis}px)`;
+                    }
+                });
+            });
+
+            // Animaciones al hacer scroll (Intersection Observer)
+            const animatedScrollElements = document.querySelectorAll('.project-card, .skills-section, .music-player');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    } else {
+                        // Opcional: Re-ocultar si se quiere que la animación se repita al scrollear hacia arriba
+                        // entry.target.classList.remove('is-visible');
+                        // entry.target.style.opacity = '0';
+                        // entry.target.style.transform = 'translateY(30px)'; 
+                    }
+                });
+            }, {
+                threshold: 0.1 // Porcentaje del elemento visible para activar la animación
+            });
+
+            animatedScrollElements.forEach(element => {
+                // Establecer estado inicial para la animación de scroll
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

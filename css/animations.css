@@ -1,0 +1,209 @@
+/* Animaciones específicas */
+
+/* Animación de entrada para elementos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para el cursor personalizado */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px 2px rgba(104, 211, 145, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba(104, 211, 145, 0.5);
+    }
+}
+
+/* Animación para partículas */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(5px) rotate(-2deg);
+    }
+}
+
+/* Animación para el efecto de máquina de escribir */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Animación para el efecto de glitch */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        text-shadow: 0 0 0 rgba(104, 211, 145, 0);
+    }
+    2% {
+        transform: translate(-2px, 0);
+        text-shadow: 1px 0 0 rgba(104, 211, 145, 0.5);
+    }
+    4% {
+        transform: translate(2px, 0);
+        text-shadow: -1px 0 0 rgba(104, 211, 145, 0.5);
+    }
+    5% {
+        transform: translate(0);
+        text-shadow: 0 0 0 rgba(104, 211, 145, 0);
+    }
+    100% {
+        transform: translate(0);
+        text-shadow: 0 0 0 rgba(104, 211, 145, 0);
+    }
+}
+
+/* Animación para el visualizador de audio */
+@keyframes equalizer {
+    0%, 100% {
+        height: 5px;
+    }
+    50% {
+        height: var(--random-height);
+    }
+}
+
+/* Animación para el efecto de hover en skills */
+@keyframes skillPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(104, 211, 145, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(104, 211, 145, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(104, 211, 145, 0);
+    }
+}
+
+/* Animación para el efecto de partículas en el fondo */
+@keyframes particleMove {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(var(--random-x1)) translateY(var(--random-y1));
+    }
+    50% {
+        transform: translateX(var(--random-x2)) translateY(var(--random-y2));
+    }
+    75% {
+        transform: translateX(var(--random-x3)) translateY(var(--random-y3));
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* Animación para el efecto de rotación 3D */
+@keyframes rotate3D {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotateX(5deg) rotateY(10deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+
+/* Animación para el efecto de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación para el efecto de ondas */
+@keyframes ripple {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Clases de animación para aplicar con JavaScript */
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-glitch {
+    animation: glitch 2s infinite;
+}
+
+.animate-typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulseGlow 2s infinite;
+}
+
+.animate-rotate3D {
+    animation: rotate3D 8s ease-in-out infinite;
+}
+
+.animate-bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.animate-ripple {
+    animation: ripple 1.5s linear infinite;
+}
+
+/* Clases para retrasos en animaciones secuenciales */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+.delay-900 { animation-delay: 0.9s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* Clases para duraciones de animación */
+.duration-300 { animation-duration: 0.3s; }
+.duration-500 { animation-duration: 0.5s; }
+.duration-700 { animation-duration: 0.7s; }
+.duration-1000 { animation-duration: 1s; }
+.duration-1500 { animation-duration: 1.5s; }
+.duration-2000 { animation-duration: 2s; }
+.duration-3000 { animation-duration: 3s; }
+
+/* Clases para funciones de temporización */
+.ease { animation-timing-function: ease; }
+.ease-in { animation-timing-function: ease-in; }
+.ease-out { animation-timing-function: ease-out; }
+.ease-in-out { animation-timing-function: ease-in-out; }
+.linear { animation-timing-function: linear; }
