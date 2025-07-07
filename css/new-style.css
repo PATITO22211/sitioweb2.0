@@ -180,6 +180,31 @@ h3, h4 {
     color: var(--secondary-accent); /* Usar acento secundario para iconos de etiqueta */
 }
 
+/* Estilos para el botón de contacto */
+.contact-button {
+    background-color: var(--primary-accent) !important;
+    color: #121212 !important;
+    font-weight: 600;
+    padding: 8px 20px !important;
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-accent);
+}
+
+.contact-button:hover {
+    background-color: var(--secondary-accent) !important;
+    color: #121212 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(187, 134, 252, 0.4);
+    border-color: var(--secondary-accent);
+}
+
+.contact-button i {
+    color: #121212 !important;
+}
+
 .profile-experience {
     margin-top: 15px;
     color: var(--text-color); /* Asegurar buen contraste */
@@ -448,5 +473,219 @@ h3, h4 {
     }
     .skill-item i {
         font-size: 1.5rem;
+    }
+}
+
+/* Estilos para la sección de proyecto actual */
+.current-project {
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-accent);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.project-header i {
+    font-size: 1.5rem;
+    color: var(--primary-accent);
+}
+
+.project-header span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.project-content h3 {
+    color: var(--primary-accent);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-role {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.role-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(3, 218, 198, 0.2);
+    color: var(--secondary-accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.role-badge i {
+    font-size: 1rem;
+}
+
+.project-status {
+    display: flex;
+    gap: 10px;
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(187, 134, 252, 0.2);
+    color: var(--primary-accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-badge i {
+    font-size: 1rem;
+}
+
+/* Estilos para la sección de otros proyectos */
+.other-projects {
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.projects-header i {
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+}
+
+.projects-header span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: rgba(40, 40, 40, 0.6);
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.project-item-header i {
+    font-size: 1.3rem;
+    color: var(--secondary-accent);
+}
+
+.project-item-header h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.project-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: var(--primary-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--secondary-accent);
+    text-decoration: underline;
+}
+
+.project-badges {
+    display: flex;
+    gap: 8px;
+}
+
+.project-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-badge i {
+    font-size: 0.9rem;
+}
+
+/* Media query para el proyecto actual */
+@media (max-width: 600px) {
+    .current-project {
+        padding: 15px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-status {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .project-item {
+        padding: 15px;
     }
 }
