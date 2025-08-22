@@ -1,0 +1,25 @@
+.project-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-card::after {
+    content: '↗';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #64ffda;
+}
+
+.project-card:hover::after {
+    opacity: 1;
+    transform: translateX(5px) translateY(-5px);
+}
+
+.project-card:active {
+    transform: scale(0.98);
+}

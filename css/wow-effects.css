@@ -1,0 +1,128 @@
+/* Wow Effects CSS */
+.glow-effect {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.glow-effect:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.glow-effect:hover:before {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.title-tag {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: floatTag 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.title-tag:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+@keyframes floatTag {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.profile-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.profile-card:hover:before {
+    left: 100%;
+}
+
+.profile-pic {
+    transition: transform 0.5s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.skill-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: 0.2s;
+}
+
+.skill-item:hover:before {
+    transform: translateX(100%);
+}
+
+/* Cool background animation */
+.video-overlay {
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.5)
+    );
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    }
+    50% {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    }
+    100% {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    }
+}

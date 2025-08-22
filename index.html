@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JRG - Portafolio</title>
     <link rel="stylesheet" href="css/new-style.css">
+    <link rel="stylesheet" href="css/wow-effects.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/projects-interactive.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/music-player.css">
+    <link rel="stylesheet" href="css/continuous-animations.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,49 +59,85 @@
         <!-- Tarjeta de perfil principal -->
         <div class="profile-card hover-glow">
             <div class="profile-header">
-                <img src="https://dariopatito.xyz/fokiu/Captura de pantalla 2025-08-10 220215.png" alt="JRG" class="profile-pic">
+                <div class="profile-pic-container">
+                    <img src="https://dariopatito.xyz/fokiu/Captura de pantalla 2025-08-10 220215.png" alt="JRG" class="profile-pic">
+                    <div class="music-player">
+                        <div class="music-header">
+                            <i class="ri-spotify-fill"></i>
+                            <span></span>
+                        </div>
+                        
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0E0DRHf5PfMeor0ZCwB3oT?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                        
+                    </div>
+                </div>
                 <div class="profile-info">
                     <h1 class="profile-name">JRG</h1>
-                    <h3><i class="ri-at-line"></i> da_rio.patito</h3>
-                    <h4>soñando despierto...</h4>
-                    <h5>15 Y/O</h5>
+                    <div class="achievement-banner">
+                        <span class="age-highlight">15 años</span> y desarrollando un software B2B SaaS
+                    </div>
                     <div class="profile-title">
-                        <span class="title-tag">
+                        <span class="title-tag glow-effect">
+                            <i class="ri-rocket-line"></i>
+                            Developer of SEEM & Linkedu
+                        </span>
+                        <span class="title-tag glow-effect">
+                            <i class="ri-lightbulb-flash-line"></i>
+                            CEO LinkEdu
+                        </span>
+                        <span class="title-tag glow-effect">
                             <i class="ri-code-s-slash-line"></i>
                             Full Stack Dev
                         </span>
-                        <span class="title-tag">
-                            <i class="ri-rocket-line"></i>
-                            Creando LinkEdu
+                        <span class="title-tag glow-effect">
+                            <i class="ri-cloud-line"></i>
+                            SaaS Dev.
                         </span>
-                        <span class="title-tag">
-                            <i class="ri-rocket-line"></i>
-                            SaaS Developer
-                        </span>
-                        <span class="title-tag">
+                        <span class="title-tag glow-effect">
                             <i class="ri-palette-line"></i>
-                            Diseñador
+                            UI/UX Designer
                         </span>
-                        <span class="title-tag">
+                        <span class="title-tag glow-effect">
                             <i class="ri-star-line"></i>
-                            Maybe the next tony stark...
-                        </span>
-                        <span class="title-tag">
-                            <i class="ri-robot-line"></i>
-                            AI Passionate
-                        </span>
-                        <span class="title-tag">
-                            <i class="ri-window-line"></i>
-                            Desktop App
+                            Joven Emprendedor
                         </span>
                         <a href="https://api.whatsapp.com/send?phone=%20529995769268&text=Heyy%2C+que+onda+Jorge.+Oye+me+gustar%C3%ADa+trabajar+contigo%2C+vengo+de+tu+p%C3%A1gina.+Tengo+un+proyecto+en+el+que+me+gustar%C3%ADa+que+me+ayudes" class="title-tag contact-button">
                             <i class="ri-mail-line"></i>
                             Contactame
                         </a>
                     </div>
-                    <p class="profile-experience">
-                        <span class="experience-highlight">4 años</span> de experiencia desarrollando soluciones digitales que impulsan el crecimiento de tu negocio.
-                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="highlight-number">15</span>
+                            <span class="stat-label">Años de Edad</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="highlight-number">∞</span>
+                            <span class="stat-label">Potencial</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="highlight-number">42</span>
+                            <span class="stat-label">Tecnologías aprendidas</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="highlight-number">4</span>
+                            <span class="stat-label">Años Programando</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <i class="ri-graduation-cap-line achievement-icon"></i>
+                            <h3 class="achievement-title">CEO de LinkEdu</h3>
+                            <p class="achievement-desc">Actualmente liderando el desarrollo de una innovadora plataforma para las escuelas (no es un classroom)</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="ri-building-4-line achievement-icon"></i>
+                            <h3 class="achievement-title">Desarrollador fullstack de SEEM</h3>
+                            <p class="achievement-desc">Desarrollé una plataforma B2B SaaS completa que revoluciona la gestión empresarial</p>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -299,6 +341,45 @@
                 </div>
             </div>
 
+            <!-- Projects Section -->
+            <div class="projects-section">
+                <h2 class="section-title glow-effect">Proyectos Destacados</h2>
+                
+                <!-- SEEM Project -->
+                <div class="project-card hover-glow" onclick="showSeemDetails()">
+                    <div class="project-header">
+                        <i class="ri-building-line"></i>
+                        <h3>SEEM - B2B SaaS Platform</h3>
+                    </div>
+                    <p class="project-description">
+                        Plataforma B2B SaaS que revoluciona la gestión empresarial de una escuela para adultos que retoman sus estudios básicos. 
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <!-- <span class="tech-tag"></span> -->
+                    </div>
+                </div>
+
+                <!-- LinkEdu Project -->
+                <div class="project-card hover-glow" onclick="showLinkEduDetails()">
+                    <div class="project-header">
+                        <i class="ri-book-open-line"></i>
+                        <h3>LinkEdu - Plataforma Educativa</h3>
+                    </div>
+                    <p class="project-description">
+                        Innovadora plataforma educativa que conecta estudiantes y profesores. Una nueva plataforma que se ajusta a las necesidades de las escuelas modernas.
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">websockets</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Nueva sección: Mi Evolución -->
             <!-- <div class="evolution-section">
                 <div class="section-header">
@@ -349,7 +430,7 @@
                 </div>
             </div> -->
 
-            <!-- Nueva sección: Estadísticas -->
+            <!-- Nueva sección: Estadísticas
             <div class="stats-section">
                 <div class="section-header">
                     <i class="ri-bar-chart-line"></i>
@@ -373,7 +454,7 @@
                         <div class="stat-label">Potencial Ilimitado</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Nueva sección: Mi Visión -->
             <div class="vision-section">
@@ -405,134 +486,9 @@
                 </div>
             </div>
 
-            <!-- Nueva sección: Mi Laboratorio -->
-            <div class="lab-section">
-                <div class="section-header">
-                    <i class="ri-flask-line"></i>
-                    <span>Mi Laboratorio</span>
-                </div>
-                <div class="lab-content">
-                    <div class="lab-intro">
-                        <p>Aquí es donde la magia sucede. Experimentando con las últimas tecnologías para crear el futuro.</p>
-                    </div>
-                    <div class="lab-projects">
-                        <div class="lab-project hover-lift">
-                            <div class="lab-project-icon">
-                                <i class="ri-robot-line"></i>
-                            </div>
-                            <div class="lab-project-info">
-                                <h4>Clark LLM v2.0</h4>
-                                <p>Entrenando una IA más inteligente y especializada</p>
-                                <span class="lab-status">En planeación</span>
-                            </div>
-                        </div>
-                        
-                        <div class="lab-project hover-lift">
-                            <div class="lab-project-icon">
-                                <i class="ri-rocket-line"></i>
-                            </div>
-                            <div class="lab-project-info">
-                                <h4>LinkEdu MVP</h4>
-                                <p>Revolucionando la gestión educativa para escuelas</p>
-                                <span class="lab-status">Prototipo</span>
-                            </div>
-                        </div>
-                        
-                        <div class="lab-project hover-lift">
-                            <div class="lab-project-icon">
-                                <i class="ri-brain-line"></i>
-                            </div>
-                            <div class="lab-project-info">
-                                <h4>Estudiando IA aplicable</h4>
-                                <p>Estudiando cómo la IA puede ser aplicada en tu día a día</p>
-                                <span class="lab-status">Teoría</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="music-player">
-                <div class="music-header">
-                    <i class="ri-spotify-fill"></i>
-                    <span></span>
-                </div>
-                
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0E0DRHf5PfMeor0ZCwB3oT?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                                
-            </div>
 
             <!-- Proyecto actual -->
-            <div class="current-project LinkEdu-project" onclick="showLinkEduDetails()">
-                <div class="project-header">
-                    <i class="ri-rocket-line"></i>
-                    <span>Proyecto Actual</span>
-                    <i class="ri-arrow-right-line click-indicator"></i>
-                </div>
-                <div class="project-content">
-                    <h3>LinkEdu</h3>
-                    <p>Desarrollando una plataforma innovadora que revolucionará la gestión educativa en las escuelas.</p>
-                    <div class="project-role">
-                        <span class="role-badge">
-                            <i class="ri-user-star-line"></i>
-                            CEO & Developer
-                        </span>
-                    </div>
-                    <div class="project-status">
-                        <span class="status-badge">
-                            <i class="ri-time-line"></i>
-                            En desarrollo
-                        </span>
-                        <span class="click-badge">
-                            <i class="ri-mouse-line"></i>
-                            Click para ver detalles
-                        </span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Otros proyectos destacados -->
-            <div class="other-projects">
-                <div class="projects-header">
-                    <i class="ri-folder-star-line"></i>
-                    <span>Proyectos Destacados</span>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-item seem-project" onclick="showSeemDetails()">
-                        <div class="project-item-header">
-                            <i class="ri-dashboard-line"></i>
-                            <h4>Seem.mx Dashboard</h4>
-                            <i class="ri-arrow-right-line click-indicator"></i>
-                        </div>
-                        <p>Plataforma de gestión y monitoreo en <a href="https://dashboard.seem.mx" target="_blank" class="project-link">dashboard.seem.mx</a></p>
-                        <div class="project-badges">
-                            <span class="project-badge">
-                                <i class="ri-check-line"></i>
-                                Completado
-                            </span>
-                            <span class="click-badge">
-                                <i class="ri-mouse-line"></i>
-                                Click para ver demo
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-item-header">
-                            <i class="ri-robot-line"></i>
-                            <h4>Clark LLM</h4>
-                        </div>
-                        <p>Entrenamiento exitoso de un modelo de lenguaje personalizado para aplicaciones específicas.</p>
-                        <div class="project-badges">
-                            <span class="project-badge">
-                                <i class="ri-check-line"></i>
-                                Entrenado
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Modal para detalles de Seem.mx -->
         <div id="seemModal" class="modal">
@@ -685,10 +641,12 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             // Animación de entrada para elementos
-            const elementsToAnimate = document.querySelectorAll('.profile-card, .project-card, .nav-item, .skill-item');
+            const elementsToAnimate = document.querySelectorAll('.profile-card, .project-card, .nav-item');
+            const skillItems = document.querySelectorAll('.skill-item');
+
+            // Animación para elementos principales
             elementsToAnimate.forEach((element, index) => {
                 element.style.opacity = '0';
-                // Aplicar un transform inicial diferente para variar la entrada
                 if (element.classList.contains('profile-card') || element.classList.contains('project-card')) {
                     element.style.transform = 'translateY(40px)';
                 } else {
@@ -699,7 +657,18 @@
                     element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
-                }, 150 + index * 100); // Inicio ligeramente retrasado y escalonado
+                }, 150 + index * 100);
+            });
+
+            // Animación rápida para skills
+            skillItems.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 150 + index * 30); // Reducido a 30ms entre cada skill
             });
             
             // Efecto parallax sutil para tarjetas principales

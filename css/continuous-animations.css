@@ -1,0 +1,253 @@
+/* Animaciones constantes para elementos principales */
+.profile-card {
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+.project-card {
+    animation: cardPulse 4s ease-in-out infinite;
+}
+
+.achievement-banner {
+    animation: glowPulse 3s ease-in-out infinite;
+    position: relative;
+}
+
+.achievement-banner::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 70%);
+    animation: rotate 8s linear infinite;
+}
+
+.title-tag {
+    animation: tagFloat 3s ease-in-out infinite;
+}
+
+.title-tag:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.skill-item {
+    animation: skillPulse 2s ease-in-out infinite;
+}
+
+.skill-item:nth-child(3n) {
+    animation-delay: 0.3s;
+}
+
+.skill-item:nth-child(3n+1) {
+    animation-delay: 0.6s;
+}
+
+.stat-card {
+    animation: statFloat 4s ease-in-out infinite;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.highlight-number {
+    animation: numberPulse 2s ease-in-out infinite;
+}
+
+/* Definición de las animaciones */
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(100,255,218,0.1);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 8px 32px rgba(100,255,218,0.2);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(100,255,218,0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(100,255,218,0.2);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes tagFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes skillPulse {
+    0%, 100% {
+        transform: scale(1);
+        border-color: rgba(255,255,255,0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        border-color: rgba(100,255,218,0.2);
+    }
+}
+
+@keyframes statFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes numberPulse {
+    0%, 100% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Animación para el fondo de video */
+.video-overlay {
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background: linear-gradient(45deg, 
+            rgba(0,0,0,0.7) 0%, 
+            rgba(100,255,218,0.05) 50%,
+            rgba(0,0,0,0.7) 100%
+        );
+    }
+    50% {
+        background: linear-gradient(45deg,
+            rgba(0,0,0,0.7) 0%,
+            rgba(100,255,218,0.1) 50%,
+            rgba(0,0,0,0.7) 100%
+        );
+    }
+}
+
+/* Animación para iconos */
+.profile-title i {
+    animation: iconRotate 3s ease-in-out infinite;
+}
+
+@keyframes iconRotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Animación para el botón de contacto */
+.contact-button {
+    animation: buttonGlow 2s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 70%);
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes buttonGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(100,255,218,0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(100,255,218,0.4);
+    }
+}
+
+/* Animación suave para hover en elementos interactivos */
+.nav-item, .skill-item, .project-card {
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .skill-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(100,255,218,0.2);
+}
+
+/* Efecto de partículas flotantes */
+.portfolio-container {
+    position: relative;
+}
+
+.portfolio-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(100,255,218,0.05) 0%, rgba(0,0,0,0) 20%),
+        radial-gradient(circle at 80% 60%, rgba(100,255,218,0.05) 0%, rgba(0,0,0,0) 20%);
+    animation: particlesFloat 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes particlesFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(-10px, 10px);
+    }
+}

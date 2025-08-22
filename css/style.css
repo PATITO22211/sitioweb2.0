@@ -310,7 +310,7 @@ body {
     border-radius: 6px;
     font-size: 0.95em;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     position: relative;
     transform-style: preserve-3d;   
     transform: translateZ(0);
