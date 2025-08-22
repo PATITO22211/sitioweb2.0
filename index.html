@@ -346,7 +346,7 @@
                 <h2 class="section-title glow-effect">Proyectos Destacados</h2>
                 
                 <!-- SEEM Project -->
-                <div class="project-card hover-glow" onclick="showSeemDetails()">
+                <div class="project-card hover-glow">
                     <div class="project-header">
                         <i class="ri-building-line"></i>
                         <h3>SEEM - B2B SaaS Platform</h3>
@@ -359,24 +359,32 @@
                         <span class="tech-tag">Node.js</span>
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">Redis</span>
-                        <!-- <span class="tech-tag"></span> -->
                     </div>
+                    <a href="https://api.whatsapp.com/send/?phone=529995769268&text=¡Hola Jorge! Vi tu portafolio y me interesa mucho tu proyecto SEEM. Me gustaría saber más detalles." target="_blank" class="project-contact-button">
+                        <i class="ri-whatsapp-line"></i>
+                        Me interesa esta plataforma
+                    </a>
                 </div>
 
                 <!-- LinkEdu Project -->
-                <div class="project-card hover-glow" onclick="showLinkEduDetails()">
+                <div class="project-card hover-glow">
                     <div class="project-header">
                         <i class="ri-book-open-line"></i>
                         <h3>LinkEdu - Plataforma Educativa</h3>
                     </div>
                     <p class="project-description">
                         Innovadora plataforma educativa que conecta estudiantes y profesores. Una nueva plataforma que se ajusta a las necesidades de las escuelas modernas.
+                    </p>
                     <div class="project-tech">
                         <span class="tech-tag">Next.js</span>
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">MongoDB</span>
                         <span class="tech-tag">websockets</span>
                     </div>
+                    <a href="https://api.whatsapp.com/send/?phone=529995769268&text=¡Hola Jorge! Vi tu portafolio y me interesa mucho tu proyecto LinkEdu. Me gustaría saber más detalles." target="_blank" class="project-contact-button">
+                        <i class="ri-whatsapp-line"></i>
+                        Me interesa LinkEdu
+                    </a>
                 </div>
             </div>
 
@@ -490,154 +498,11 @@
             <!-- Proyecto actual -->
 
 
-        <!-- Modal para detalles de Seem.mx -->
-        <div id="seemModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3>🚀 Seem.mx Dashboard</h3>
-                    <button class="modal-close" onclick="closeSeemModal()">
-                        <i class="ri-close-line"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="project-description">
-                        <h4>Descripción del Proyecto</h4>
-                        <p><strong>La plataforma hecha para <a href="https://seem.mx" target="_blank" class="project-link accent-text">SEEM (Servicios Educativos Empresariales)</a></strong> es una plataforma web integral diseñada para gestionar la educación básica de adultos que cursan primaria, secundaria y preparatoria a través de empresas asociadas como OXXO, Springs y otras corporaciones.</p>
-                        
-                        <h5>🎯 Objetivo Principal</h5>
-                        <p>Facilitar y digitalizar el proceso educativo para adultos que retoman sus estudios básicos, proporcionando tanto a estudiantes como a administradores una herramienta moderna, intuitiva y eficiente para el seguimiento académico.</p>
 
-                        <h5>📊 Funcionalidades Principales</h5>
-                        <ul>
-                            <li><strong>Dashboard de Estudiantes:</strong> Perfil académico, calificaciones detalladas, generación de reportes PDF</li>
-                            <li><strong>Panel de Administración:</strong> Gestión de estudiantes, sedes, estadísticas avanzadas, carga masiva de datos</li>
-                            <li><strong>Reportes Automáticos:</strong> Boletas, certificados y análisis de progreso del estudiante</li>
-                            <li><strong>Sistema de Roles:</strong> Permisos granulares para estudiantes y administradores</li>
-                        </ul>
-
-                        <h5>💼 Propuesta de Valor</h5>
-                        <ul>
-                            <li><strong>Digitalización educativa:</strong> Automatización de procesos administrativos</li>
-                            <li><strong>Escalabilidad:</strong> Gestión centralizada de múltiples sedes</li>
-                            <li><strong>ROI demostrable:</strong> Reducción significativa en tiempo de gestión</li>
-                            <li><strong>Competencia diferenciada:</strong> Solución moderna para la educación</li>
-                            <li><strong>Experiencia mejorada:</strong> Interfaz intuitiva optimizada para adultos</li>
-                        </ul>
-
-                        <h5>📈 Resultados Demostrables</h5>
-                        <ul>
-                            <li>Reducción significativa en tiempo de gestión administrativa</li>
-                            <li>Mejora notable en satisfacción del estudiante</li>
-                            <li>Aumento en retención de estudiantes</li>
-                            <li>Escalabilidad a múltiples funcionalidades</li>
-                        </ul>
-                    </div>
-                    <div class="project-video">
-                        <h4>Demo del Proyecto</h4>
-                        <h6 class="video-info">Video creado por <a href="https://dariopatito.xyz" target="_blank" class="project-link">dariopatito.xyz</a> | Versión demostrada: v2.3.1 (Actual: v2.4.5)</h6>
-                        <video controls width="100%">
-                            <source src="https://dashboard.seem.mx/SEEM-VID-DEMO%202.3.1.webm" type="video/webm">
-                            Tu navegador no soporta el elemento video.
-                        </video>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://api.whatsapp.com/send/?phone=529995769268&text=Hola+jorge%2C+vengo+de+tu+p%C3%A1gina.+Estoy+interesado+en+lo+que+hiciste+para+seem.mx%2C+me+gustar%C3%ADa+saber+m%C3%A1s&type=phone_number&app_absent=0" target="_blank" class="project-link-button">
-                            <i class="ri-external-link-line"></i>
-                            Mandame un mensaje
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal para detalles de LinkEdu -->
-        <div id="LinkEduModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3>🚀 LinkEdu - Plataforma Educativa</h3>
-                    <button class="modal-close" onclick="closeLinkEduModal()">
-                        <i class="ri-close-line"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="project-description">
-                        <h4>Descripción del Proyecto</h4>
-                        <p><strong>LinkEdu</strong> es una plataforma tipo SaaS (Software as a Service) para instituciones educativas, diseñada para modernizar la gestión escolar y mejorar la experiencia educativa, ofrecida como SaaS multicliente con marca blanca.</p>
-                        
-                        <h5>🎯 Slogan y Propósito</h5>
-                        <p><em>"Conectando el futuro de la educación"</em></p>
-                        <p>Diseñada para digitalizar y optimizar la gestión educativa completa, desde la inscripción de estudiantes hasta el seguimiento académico, incluyendo calificaciones, asistencia, comunicación con padres, planificación docente y recursos educativos digitales.</p>
-                        
-                        <div class="hourglass-container">
-                            <div class="hourglass">
-                                <div class="hourglass-top"></div>
-                                <div class="hourglass-middle"></div>
-                                <div class="hourglass-bottom"></div>
-                                <div class="hourglass-sand"></div>
-                            </div>
-                            <p class="hourglass-text">Desarrollo en progreso...</p>
-                        </div>
-                        <h5>🚀 Estado Actual</h5>
-                        <ul>
-                            <li>✅ Idea clara y definida</li>
-                            <li>✅ Nombre y slogan elegidos</li>
-                            <li>🔄 Logo y branding visual (en progreso)</li>
-                            <li>📋 Landing page (próximo)</li>
-                            <li>⚙️ MVP técnico inicial (en desarrollo)</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://api.whatsapp.com/send/?phone=529995769268&text=Hola+jorge%2C+vengo+de+tu+p%C3%A1gina.+Estoy+interesado+en+LinkEdu%2C+me+gustar%C3%ADa+saber+m%C3%A1s&type=phone_number&app_absent=0" target="_blank" class="project-link-button">
-                            <i class="ri-mail-line"></i>
-                            Solicitar Información
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
 
 
     <!-- Scripts -->
     <script>
-        // Funciones para el modal de Seem.mx
-        function showSeemDetails() {
-            const modal = document.getElementById('seemModal');
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevenir scroll
-        }
-
-        function closeSeemModal() {
-            const modal = document.getElementById('seemModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restaurar scroll
-        }
-
-        // Funciones para el modal de LinkEdu
-        function showLinkEduDetails() {
-            const modal = document.getElementById('LinkEduModal');
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevenir scroll
-        }
-
-        function closeLinkEduModal() {
-            const modal = document.getElementById('LinkEduModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restaurar scroll
-        }
-
-        // Cerrar modales al hacer clic fuera de ellos
-        window.onclick = function(event) {
-            const seemModal = document.getElementById('seemModal');
-            const LinkEduModal = document.getElementById('LinkEduModal');
-            
-            if (event.target === seemModal) {
-                closeSeemModal();
-            }
-            if (event.target === LinkEduModal) {
-                closeLinkEduModal();
-            }
-        }
 
         document.addEventListener('DOMContentLoaded', function() {
             // Animación de entrada para elementos

@@ -1,25 +1,34 @@
 .project-card {
-    cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.project-card::after {
-    content: '↗';
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.2rem;
-    opacity: 0;
+.project-contact-button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-radius: 8px;
+    color: #25d366;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: all 0.3s ease;
-    color: #64ffda;
+    font-weight: 500;
 }
 
-.project-card:hover::after {
-    opacity: 1;
-    transform: translateX(5px) translateY(-5px);
+.project-contact-button i {
+    font-size: 1.2rem;
 }
 
-.project-card:active {
-    transform: scale(0.98);
+.project-contact-button:hover {
+    background: rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.5);
+    transform: translateY(-2px);
+}
+
+.project-contact-button:active {
+    transform: translateY(0);
 }
